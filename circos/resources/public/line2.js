@@ -8,35 +8,35 @@ var circosLine = new Circos({
 var drawCircos = function (error, pi519Pb, pi505Pa, pi520Pa, pi579Pa, genepos, geneneg, CDSpos, CDSneg) {
     pi519Pb = pi519Pb.map(function (d) {
 	return {
-	    block_id: d.sample,
+	    block_id: "HCMV",
 	    position: parseInt(d.position1),
 	    value: d.value
 	}
     })
     pi505Pa = pi505Pa.map(function (d) {
 	return {
-	    block_id:  "02-519-Pb",
+	    block_id:  "HCMV",
 	    position: parseInt(d.position1),
 	    value: d.value
 	}
     })
     pi520Pa = pi520Pa.map(function (d) {
 	return {
-	    block_id:  "02-519-Pb",
+	    block_id:  "HCMV",
 	    position: parseInt(d.position1),
 	    value: d.value
 	}
      })
     pi579Pa = pi579Pa.map(function (d) {
 	return {
-	    block_id:  "02-519-Pb",
+	    block_id:  "HCMV",
 	    position: parseInt(d.position1),
 	    value: d.value
 	}
      })
     genepos = genepos.map(function (d) {
 	return {
-	    block_id: "02-519-Pb",
+	    block_id: "HCMV",
 	    start: parseInt(d.start),
 	    end: parseInt(d.end),
 	    name: d.genep
@@ -44,7 +44,7 @@ var drawCircos = function (error, pi519Pb, pi505Pa, pi520Pa, pi579Pa, genepos, g
     })
     geneneg = geneneg.map(function (d) {
 	return {
-	    block_id: "02-519-Pb",
+	    block_id: "HCMV",
 	    start: parseInt(d.start),
 	    end: parseInt(d.end),
 	    name: d.genen
@@ -52,7 +52,7 @@ var drawCircos = function (error, pi519Pb, pi505Pa, pi520Pa, pi579Pa, genepos, g
     })
     CDSpos = CDSpos.map(function (d) {
 	return {
-	    block_id: "02-519-Pb",
+	    block_id: "HCMV",
 	    start: parseInt(d.start),
 	    end: parseInt(d.end),
 	    name: d.CDSp
@@ -60,7 +60,7 @@ var drawCircos = function (error, pi519Pb, pi505Pa, pi520Pa, pi579Pa, genepos, g
     })
     CDSneg = CDSneg.map(function (d) {
 	return {
-	    block_id: "02-519-Pb",
+	    block_id: "HCMV",
 	    start: parseInt(d.start),
 	    end: parseInt(d.end),
 	    name: d.CDSn
@@ -69,7 +69,7 @@ var drawCircos = function (error, pi519Pb, pi505Pa, pi520Pa, pi579Pa, genepos, g
     
     circosLine
 	.layout(
-	    [{len: 235912, color: "#29CCFF", label: "519-Pb", id: "02-519-Pb"}],
+	    [{len: 235912, color: "#29CCFF", label: "519-Pb", id: "HCMV"}],
 	    {
 		innerRadius: 750,
 		outerRadius: 700,
@@ -231,10 +231,10 @@ var drawCircos = function (error, pi519Pb, pi505Pa, pi520Pa, pi579Pa, genepos, g
 }
 
 d3.queue()
-    .defer(d3.csv, './data/W19-Pb.csv')
-    .defer(d3.csv, './data/W05-Pa.csv')
-    .defer(d3.csv, './data/W20-Pa.csv')
-    .defer(d3.csv, './data/W79-Pa.csv')
+    .defer(d3.csv, './data/W19-S1a.csv')
+    .defer(d3.csv, './data/W05-M.csv')
+    .defer(d3.csv, './data/W20-S1a.csv')
+    .defer(d3.csv, './data/W79-S1a.csv')
     .defer(d3.csv, './data/genepos.csv')
     .defer(d3.csv, './data/geneneg.csv')
     .defer(d3.csv, './data/CDSpos.csv')
